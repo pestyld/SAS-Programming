@@ -30,34 +30,6 @@ FILE(S) CREATED:
 	4. ClaimsByAirport - Joins the TotalClaims and TotalEnplanements views to calculates percentage of claims for airport by year
 	5. FinalResults.html - HTML results
 
-FUTURE ENHANCEMENTS/ISSUES:
-(Complete) 1. Probably need to limit the data by years. It's around 200,000 + rows and goes slow at times.
-			- Maybe years 2010 - 2017? Last 5 years? Something like that to help speed up processing.
-(Complete) 2. Finalize the Analyze stage. This can really be anything, I went a bit overboard with the visualizations. 
-              Goal of this case study is for the learners to access/explore/prepare the data. The analyze stage will be 
-              some cool SAS tricks and allow the learners to compare their data and make sure it matches. The learner 
-              will complete the prepare data stage then run the code in the Analyze stage. They then can compare the 
-              results of that stage with the graphs/results we provide in in the PDF. Feel free to change anything here.
-(Complete) 3. Check all code and verify it is correct.
-(Complete) 4. Check everything on University Edition, SAS On Demand, Virtual Lab, and Classroom for processing speed
-	          and ensure everything works.
-           5. Test in the virtual lab environment.
-*************************************************************************************************
-					Modification Log
-DATE(MM/DD/YY)	USER		MODIFICATION
-08/19/2019		Styliadis	Reduce data size, clean up visuals, include only basic visuals.
-08/22/2019		Styliadis	Beginning finalizing the solution and results page.
-09/05/2019		Styliadis	Boarding2013_2016 had 2012 data. The rows were removed.
-							Added step to explore the boarding and enplanement tables
-9/09/2019		Styliadis	TR Updates. Small changes, cleaning up " and ' to be consistent, comments.
-9/16/2019		Styliadis	Clean up directions throughout code, cre8data program, final review.	
-9/18/2019		Styliadis	Issue with default ODS output in SODA and UE. Used ODS _all_ close to fix problem. Runs in both interfaces.
-							Issues is that Studio tries to create the PDF and WORD document. Causes a lot of warnings. Also had a warning
-							because another font was chosen for ODS text. Removed that and left the default.
-9/20/2019		Styliadis	All data is now in the WORK library. Made necessary change to reflect that all input/output tables need to be in WORK.
-9/23/2019		Styliadis	Uploaded the SQL Case Study solution to the ELP.	
-*************************************************************************************************/
-
 *************************************************************************************;
 *  The following is the step by step solution for the Intermediate/Beginner Sections*; 
 *************************************************************************************;

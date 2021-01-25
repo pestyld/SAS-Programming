@@ -68,14 +68,14 @@ ods graphics on /width=11in height=4.5in imagemap=on;
 title h=&TitleSize color=&TitleColor "Total Claims by Year";
 footnote "NOTE: Using the Claims Cleaned Table";
 proc sgplot data=TotalClaimsByYear;
-	vbar Year / response=TotalClaims colorresponse=TotalClaims
+   vbar Year / response=TotalClaims colorresponse=TotalClaims
                 dataskin=pressed
                 barwidth=.8
                 datalabel
                 colormodel=(cxedf8b1 cx7fcdbb cx2c7fb8)
                 tip=(Year TotalClaims);
-	gradlegend / notitle;
-	yaxis display=(noline noticks) grid label="Total Claims Filed";
+   gradlegend / notitle;
+   yaxis display=(noline noticks) grid label="Total Claims Filed";
 quit;
 title;
 footnote;
@@ -89,7 +89,7 @@ ods region row=2 column=3;
 proc sql noprint;
 select sum(Enplanement) as TotalDateIssues format=comma16.
     into :TotalEnplanements trimmed
-	from &inputlib..ClaimsByAirport;
+   from &inputlib..ClaimsByAirport;
 quit;
 ods text="^{style[just=c fontsize=&EmphasisText]Total Enplanements}";
 ods text="^{style[just=r fontsize=&EmphasisNumbersSize color=&EmphasisNumbers]&TotalEnplanements}";
@@ -98,7 +98,7 @@ ods text="^{style[just=r fontsize=&EmphasisNumbersSize color=&EmphasisNumbers]&T
 proc sql noprint;
 select count(*) as TotalClaims format=comma16.
     into :TotalClaims trimmed
-	from &inputlib..Claims_Cleaned;
+   from &inputlib..Claims_Cleaned;
 quit;
 ods text="^{style[textalign=c fontsize=&EmphasisText color=&MainTitleColor]Total Claims Filed}";
 ods text="^{style[textalign=c fontsize=&EmphasisNumbersSize color=&EmphasisNumbers]&TotalClaims}";
@@ -109,9 +109,9 @@ ods text="^{style[textalign=c fontsize=&EmphasisNumbersSize color=&EmphasisNumbe
 %let TotalClaimsNum=%sysfunc(compress("&TotalClaims",","));
      /*Step 2. Calculate the percentage of total claims by enplanements and store in a macro variable*/
 data _null_;
-	Total=&TotalClaimsNum/&TotalEnplanementsNum;
-	PercentValue=put(Total,percent8.4);
-	call symputx('PctClaimsTotal',PercentValue);
+   Total=&TotalClaimsNum/&TotalEnplanementsNum;
+   PercentValue=put(Total,percent8.4);
+   call symputx('PctClaimsTotal',PercentValue);
 run;
 ods text="^{style[textalign=c fontsize=&EmphasisText color=&MainTitleColor]Percentage of Claims Filed by Enplanements}";
 ods text="^{style[textalign=c fontsize=&EmphasisNumbersSize color=&EmphasisNumbers]&PctClaimsTotal}";
@@ -130,7 +130,7 @@ proc sql noprint;
 select count(*) as TotalUnknownAirports format=comma5.
     into :TotalUnknownAirports
     from &inputlib..claims_cleaned
-	where Airport_Code = "Unknown";
+   where Airport_Code = "Unknown";
 quit;
 ods text="^{style[textalign=c fontsize=&EmphasisText color=&MainTitleColor]Total Unknown Airports}";
 ods text="^{style[textalign=c fontsize=&EmphasisNumbersSize color=&EmphasisNumbers]&TotalUnknownAirports}";
@@ -148,8 +148,8 @@ ods region row=3 column=1;
 ods graphics on /width=5.5in height=4in;
 title h=&TitleSize color=&TitleColor "Types of Claims Filed (Claim_Type)";
 proc sgplot data=&inputlib..claims_Cleaned;
-	hbar Claim_Type / categoryorder=respdesc datalabel fillattrs=(color= cx7fcdbb);
-	yaxis display=(nolabel noticks noline)
+   hbar Claim_Type / categoryorder=respdesc datalabel fillattrs=(color= cx7fcdbb);
+   yaxis display=(nolabel noticks noline)
           valueattrs=(color=gray33 size=9pt);
     xaxis grid labelattrs=(color=gray33 size=9pt)
           valueattrs=(color=gray33 size=9pt);
@@ -165,10 +165,10 @@ ods region row=3 column=2;
 ods graphics on /width=5.5in height=4in ;
 title h=&TitleSize color=&TitleColor "Final Result of a Claim (Disposition)";
 proc sgplot data=&inputlib..claims_Cleaned;
-	hbar Disposition / categoryorder=respdesc
- 					   datalabel
-					   fillattrs=(color=cxedf8b1);
-	yaxis display=(nolabel noticks noline)
+   hbar Disposition / categoryorder=respdesc
+                      datalabel
+                      fillattrs=(color=cxedf8b1);
+   yaxis display=(nolabel noticks noline)
           valueattrs=(color=gray33 size=9pt);
     xaxis grid labelattrs=(color=gray33 size=9pt)
           valueattrs=(color=gray33 size=9pt);
@@ -184,8 +184,8 @@ ods region row=3 column=3;
 ods graphics on /width=5.5in height=4in;
 title h=&TitleSize color=&TitleColor "Location Site of a Claim (Claim_Site)";
 proc sgplot data=&inputlib..Claims_Cleaned;
-	hbar Claim_Site / categoryorder=respdesc datalabel fillattrs=(color=cx2c7fb8);
-	yaxis display=(nolabel noticks noline)
+   hbar Claim_Site / categoryorder=respdesc datalabel fillattrs=(color=cx2c7fb8);
+   yaxis display=(nolabel noticks noline)
           valueattrs=(color=gray33 size=9pt);
     xaxis grid labelattrs=(color=gray33 size=9pt)
           valueattrs=(color=gray33 size=9pt);
@@ -204,9 +204,9 @@ ods region row=4 column=1 column_span=2;
 proc sql outobs=20;
 create table top20airports as
 select *
-	from &inputlib..ClaimsByAirport
-	where Enplanement > 10000000
-	order by PctClaims desc;
+   from &inputlib..ClaimsByAirport
+   where Enplanement > 10000000
+   order by PctClaims desc;
 quit;
 
 /*Visualize the top20airports table*/
@@ -214,15 +214,15 @@ ods graphics on /width=12in height=4in;
 title1 h=&TitleSize color=&TitleColor "Top 20 Airports by Highest Percetage of Claims Filed";
 title2 h=&TitleSize color=&TitleColor "For Airports With More Than 10 Million Passengers";
 proc sgplot data=top20airports;
-	bubble x=Enplanement y=PctClaims size=TotalClaims / group=Airport_Code
-														datalabel=Airport_Code
-														transparency=.3
-														tip=(Airport_Name PctClaims Enplanement TotalClaims State)
-														datalabelattrs=(size=8 weight=bold);
-	inset "Bubble size represents total number of claims" / position=topleft
- 															textattrs=(size=8);
-	yaxis grid label="Percentage of Claims Per Passengers";
-	xaxis grid label="Total Passengers";
+   bubble x=Enplanement y=PctClaims size=TotalClaims / group=Airport_Code
+                                                       datalabel=Airport_Code
+                                                       transparency=.3
+                                                       tip=(Airport_Name PctClaims Enplanement TotalClaims State)
+                                                       datalabelattrs=(size=8 weight=bold);
+   inset "Bubble size represents total number of claims" / position=topleft
+                                                           textattrs=(size=8);
+   yaxis grid label="Percentage of Claims Per Passengers";
+   xaxis grid label="Total Passengers";
 run;
 title;
 
