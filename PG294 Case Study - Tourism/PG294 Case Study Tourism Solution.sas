@@ -205,6 +205,19 @@ proc means data=final_tourism min mean max maxdec=0;
 	var y2014;
 run;
 title;
+
+* Course Questions*;
+proc means data=final_tourism mean min max maxdec=0;	
+	var y2014;
+	class Continent;
+	where Category="Arrivals";
+run;
+
+proc means data=final_tourism mean maxdec=0;	
+	var y2014;
+	where lowcase(Category) contains "tourism expenditure in other countries";
+run; 
+
 /*****************************FINAL DATA VALIDATION*****************************/
 
 
