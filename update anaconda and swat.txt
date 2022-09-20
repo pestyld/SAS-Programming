@@ -1,0 +1,5 @@
+conda update --all
+
+https://www.anaconda.com/blog/keeping-anaconda-date
+
+conda install -c sas-institute swat
