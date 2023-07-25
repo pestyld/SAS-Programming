@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html class="ods_180ddf15-2180-49cf-9960-17a214ce077b" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>Results: spanish_corpus_import.sas</title>
+<style>
+/*<![CDATA[*/
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .body.c section > table, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.c section > pre, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.c div > table,
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .body.c div > pre, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.c article > table, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.c article > pre,
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .body.j section > table, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.j section > pre, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.j div > table,
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .body.j div > pre, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.j article > table, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.j article > pre,
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .body.c p.note, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.c p.warning, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.c p.error, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.c p.fatal,
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .body.j p.note, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.j p.warning, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.j p.error, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.j p.fatal,
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .body.c > table.layoutcontainer, .ods_180ddf15-2180-49cf-9960-17a214ce077b .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.l table, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.l pre, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.l p.note,
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.l p.warning, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.l p.error, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.l p.fatal { margin-left: 0 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.c table, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.c pre, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.c p.note,
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.c p.warning, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.c p.error, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.r table, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.r pre, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.r p.note,
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.r table, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.r pre, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.r p.note,
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.r p.warning, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.r p.error, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion.r p.fatal { margin-right: 0 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b article, .ods_180ddf15-2180-49cf-9960-17a214ce077b aside, .ods_180ddf15-2180-49cf-9960-17a214ce077b details, .ods_180ddf15-2180-49cf-9960-17a214ce077b figcaption, .ods_180ddf15-2180-49cf-9960-17a214ce077b figure, .ods_180ddf15-2180-49cf-9960-17a214ce077b footer, .ods_180ddf15-2180-49cf-9960-17a214ce077b header, .ods_180ddf15-2180-49cf-9960-17a214ce077b hgroup, .ods_180ddf15-2180-49cf-9960-17a214ce077b nav, .ods_180ddf15-2180-49cf-9960-17a214ce077b section { display: block }
+html.ods_180ddf15-2180-49cf-9960-17a214ce077b { font-size: 100% }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .body { margin: 1em; font-size: 13px; line-height: 1.231 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b ul, .ods_180ddf15-2180-49cf-9960-17a214ce077b ol { margin: 1em 0; padding: 0 0 0 40px }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b dd { margin: 0 0 0 40px }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b nav ul, .ods_180ddf15-2180-49cf-9960-17a214ce077b nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b img { border: 0; vertical-align: middle }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b svg:not(:root) { overflow: hidden }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b figure { margin: 0 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b table { border-collapse: collapse; border-spacing: 0 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutcontainer { border-collapse: separate; border-spacing: 0 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b p { margin-top: 0; text-align: left }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b h1.heading1 { text-align: left }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b h2.heading2 { text-align: left }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b h3.heading3 { text-align: left }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b h4.heading4 { text-align: left }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b h5.heading5 { text-align: left }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b h6.heading6 { text-align: left }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b span { text-align: left }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b table { margin-bottom: 1em }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b td, .ods_180ddf15-2180-49cf-9960-17a214ce077b th { text-align: left; padding: 3px 6px; vertical-align: top }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b td[class$="fixed"], .ods_180ddf15-2180-49cf-9960-17a214ce077b th[class$="fixed"] { white-space: pre }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b section, .ods_180ddf15-2180-49cf-9960-17a214ce077b article { padding-top: 1px; padding-bottom: 8px }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .stacked-value { text-align: left; display: block }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .stacked-cell > .stacked-value, .ods_180ddf15-2180-49cf-9960-17a214ce077b td.data > td.data, .ods_180ddf15-2180-49cf-9960-17a214ce077b th.data > td.data, .ods_180ddf15-2180-49cf-9960-17a214ce077b th.data > th.data, .ods_180ddf15-2180-49cf-9960-17a214ce077b td.data > th.data, .ods_180ddf15-2180-49cf-9960-17a214ce077b th.header > th.header { border: 0 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .stacked-cell > div.data { border-width: 0 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .systitleandfootercontainer > p { margin: 0 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .batch { display: table }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .toc { display: none }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .proc_note_group, .ods_180ddf15-2180-49cf-9960-17a214ce077b .proc_title_group { margin-bottom: 1em }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b p.proctitle { margin: 0 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b p.note, .ods_180ddf15-2180-49cf-9960-17a214ce077b p.warning, .ods_180ddf15-2180-49cf-9960-17a214ce077b p.error, .ods_180ddf15-2180-49cf-9960-17a214ce077b p.fatal { display: table }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .notebanner, .ods_180ddf15-2180-49cf-9960-17a214ce077b .warnbanner, .ods_180ddf15-2180-49cf-9960-17a214ce077b .errorbanner, .ods_180ddf15-2180-49cf-9960-17a214ce077b .fatalbanner,
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .notecontent, .ods_180ddf15-2180-49cf-9960-17a214ce077b .warncontent, .ods_180ddf15-2180-49cf-9960-17a214ce077b .errorcontent, .ods_180ddf15-2180-49cf-9960-17a214ce077b .fatalcontent { display: table-cell; padding: 0.5em }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .notebanner, .ods_180ddf15-2180-49cf-9960-17a214ce077b .warnbanner, .ods_180ddf15-2180-49cf-9960-17a214ce077b .errorbanner, .ods_180ddf15-2180-49cf-9960-17a214ce077b .fatalbanner { padding-right: 0 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .body > div > ol li { text-align: left }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .c { text-align: center }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .r { text-align: right }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .l { text-align: left }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .j { text-align: justify }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .d { text-align: right }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .b { vertical-align: bottom }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .m { vertical-align: middle }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .t { vertical-align: top }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .accessiblecaption {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b a:active { color: #800080 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .aftercaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    padding-top: 4pt;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .batch > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .batch > tbody, .ods_180ddf15-2180-49cf-9960-17a214ce077b .batch > thead, .ods_180ddf15-2180-49cf-9960-17a214ce077b .batch > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .batch { border: hidden; }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .batch {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .beforecaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .body {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .bodydate {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .bycontentfolder {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .byline {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .bylinecontainer > col, .ods_180ddf15-2180-49cf-9960-17a214ce077b .bylinecontainer > colgroup > col, .ods_180ddf15-2180-49cf-9960-17a214ce077b .bylinecontainer > colgroup, .ods_180ddf15-2180-49cf-9960-17a214ce077b .bylinecontainer > tr, .ods_180ddf15-2180-49cf-9960-17a214ce077b .bylinecontainer > * > tr, .ods_180ddf15-2180-49cf-9960-17a214ce077b .bylinecontainer > thead, .ods_180ddf15-2180-49cf-9960-17a214ce077b .bylinecontainer > tbody, .ods_180ddf15-2180-49cf-9960-17a214ce077b .bylinecontainer > tfoot { border: none; }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .bylinecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .caption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .cell, .ods_180ddf15-2180-49cf-9960-17a214ce077b .container {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .contentfolder, .ods_180ddf15-2180-49cf-9960-17a214ce077b .contentitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .contentproclabel, .ods_180ddf15-2180-49cf-9960-17a214ce077b .contentprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .contents {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .contentsdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .contenttitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .continued {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .data, .ods_180ddf15-2180-49cf-9960-17a214ce077b .dataemphasis {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .dataemphasisfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .dataempty {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .datafixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .datastrong {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .datastrongfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .date {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .document {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .errorbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .errorcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .errorcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .extendedpage {
+    background-color: #fafbfe;
+    border-style: solid;
+    border-width: 1pt;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .fatalbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .fatalcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .fatalcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .folderaction {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .footer {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .footeremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .footeremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .footerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .footerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .footerstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .footerstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .frame {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .graph > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .graph > tbody, .ods_180ddf15-2180-49cf-9960-17a214ce077b .graph > thead, .ods_180ddf15-2180-49cf-9960-17a214ce077b .graph > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .graph { border: hidden; }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .graph {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .header {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .headeremphasis {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .headeremphasisfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .headerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .headerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .headersandfooters {
+    background-color: #edf2f9;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .headerstrong {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .headerstrongfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .heading1, .ods_180ddf15-2180-49cf-9960-17a214ce077b .heading2, .ods_180ddf15-2180-49cf-9960-17a214ce077b .heading3, .ods_180ddf15-2180-49cf-9960-17a214ce077b .heading4, .ods_180ddf15-2180-49cf-9960-17a214ce077b .heading5, .ods_180ddf15-2180-49cf-9960-17a214ce077b .heading6 { font-family: Arial, Helvetica, sans-serif }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .index {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .indexaction, .ods_180ddf15-2180-49cf-9960-17a214ce077b .indexitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .indexprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .indextitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutcontainer, .ods_180ddf15-2180-49cf-9960-17a214ce077b .layoutregion {
+    border-width: 0;
+    border-spacing: 30px;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .linecontent {
+    background-color: #fafbfe;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b a:link { color: #0000ff }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .list {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .list10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .list2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .list3, .ods_180ddf15-2180-49cf-9960-17a214ce077b .list4, .ods_180ddf15-2180-49cf-9960-17a214ce077b .list5, .ods_180ddf15-2180-49cf-9960-17a214ce077b .list6, .ods_180ddf15-2180-49cf-9960-17a214ce077b .list7, .ods_180ddf15-2180-49cf-9960-17a214ce077b .list8, .ods_180ddf15-2180-49cf-9960-17a214ce077b .list9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .listitem {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .listitem10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .listitem2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .listitem3, .ods_180ddf15-2180-49cf-9960-17a214ce077b .listitem4, .ods_180ddf15-2180-49cf-9960-17a214ce077b .listitem5, .ods_180ddf15-2180-49cf-9960-17a214ce077b .listitem6, .ods_180ddf15-2180-49cf-9960-17a214ce077b .listitem7, .ods_180ddf15-2180-49cf-9960-17a214ce077b .listitem8, .ods_180ddf15-2180-49cf-9960-17a214ce077b .listitem9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .note {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .notebanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .notecontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .notecontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .output > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .output > tbody, .ods_180ddf15-2180-49cf-9960-17a214ce077b .output > thead, .ods_180ddf15-2180-49cf-9960-17a214ce077b .output > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .output { border: hidden; }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .output {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .pageno {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .pages {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .pagesdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .pagesitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .pagesproclabel, .ods_180ddf15-2180-49cf-9960-17a214ce077b .pagesprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .pagestitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .paragraph {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .parskip > col, .ods_180ddf15-2180-49cf-9960-17a214ce077b .parskip > colgroup > col, .ods_180ddf15-2180-49cf-9960-17a214ce077b .parskip > colgroup, .ods_180ddf15-2180-49cf-9960-17a214ce077b .parskip > tr, .ods_180ddf15-2180-49cf-9960-17a214ce077b .parskip > * > tr, .ods_180ddf15-2180-49cf-9960-17a214ce077b .parskip > thead, .ods_180ddf15-2180-49cf-9960-17a214ce077b .parskip > tbody, .ods_180ddf15-2180-49cf-9960-17a214ce077b .parskip > tfoot { border: none; }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .parskip {
+    border: none;
+    border-spacing: 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .prepage {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .proctitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .proctitlefixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowfooter {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowfooteremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowfooteremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowfooterempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowfooterfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowfooterstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowfooterstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowheader {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowheaderemphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowheaderemphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowheaderempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowheaderfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowheaderstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .rowheaderstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .systemfooter, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemfooter10, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemfooter2, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemfooter3, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemfooter4, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemfooter5, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemfooter6, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemfooter7, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemfooter8, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemfooter9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .systemtitle, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemtitle10, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemtitle2, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemtitle3, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemtitle4, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemtitle5, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemtitle6, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemtitle7, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemtitle8, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systemtitle9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .systitleandfootercontainer > col, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systitleandfootercontainer > colgroup > col, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systitleandfootercontainer > colgroup, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systitleandfootercontainer > tr, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systitleandfootercontainer > * > tr, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systitleandfootercontainer > thead, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systitleandfootercontainer > tbody, .ods_180ddf15-2180-49cf-9960-17a214ce077b .systitleandfootercontainer > tfoot { border: none; }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .systitleandfootercontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .table > col, .ods_180ddf15-2180-49cf-9960-17a214ce077b .table > colgroup > col {
+    border-left: 1px solid #c1c1c1;
+    border-right: 0 solid #c1c1c1;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .table > tr, .ods_180ddf15-2180-49cf-9960-17a214ce077b .table > * > tr {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 0 solid #c1c1c1;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .table { border: hidden; }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .table {
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .titleandnotecontainer > col, .ods_180ddf15-2180-49cf-9960-17a214ce077b .titleandnotecontainer > colgroup > col, .ods_180ddf15-2180-49cf-9960-17a214ce077b .titleandnotecontainer > colgroup, .ods_180ddf15-2180-49cf-9960-17a214ce077b .titleandnotecontainer > tr, .ods_180ddf15-2180-49cf-9960-17a214ce077b .titleandnotecontainer > * > tr, .ods_180ddf15-2180-49cf-9960-17a214ce077b .titleandnotecontainer > thead, .ods_180ddf15-2180-49cf-9960-17a214ce077b .titleandnotecontainer > tbody, .ods_180ddf15-2180-49cf-9960-17a214ce077b .titleandnotecontainer > tfoot { border: none; }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .titleandnotecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .titlesandfooters {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .usertext {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b a:visited { color: #800080 }
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .warnbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .warncontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_180ddf15-2180-49cf-9960-17a214ce077b .warncontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="body">
+<div id="div_180ddf15-2180-49cf-9960-17a214ce077b" class="c body">
+<h1 class="body toc">Results: spanish_corpus_import.sas</h1>
+<section data-name="Print" data-sec-type="proc">
+<h1 class="contentprocname toc">The Print Procedure</h1>
+<article id="web-180ddf15-2180-4" aria-label="Data Set WORK.MYCORP">
+<h1 class="contentitem toc">Data Set WORK.MYCORP</h1>
+<table class="table" style="border-spacing: 0" aria-label="Data Set WORK.MYCORP">
+<caption aria-label="Data Set WORK.MYCORP"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">Obs</th>
+<th class="header" scope="col">DOCID</th>
+<th class="header" scope="col">DOCUMENTS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<td class="data">20540</td>
+<td class="data">Acontecimientos . Nacimientos . Fallecimientos . Fulgencio de Écija, santo español. Erquinoaldo, mayordomo franco de palacio de Neustria. ;</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<td class="data">20541</td>
+<td class="data">Acontecimientos . Nacimientos . Egilona, última reina visigoda de Hispania. Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<td class="data">20542</td>
+<td class="data">Acontecimientos . Fin del Califato Perfecto. Los Omeyas en el poder. Califato de Damasco. Di Nacimientos . Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">4</th>
+<td class="data">20543</td>
+<td class="data">Acontecimientos . Los omeyas acceden al califato. Nacimientos . Fallecimientos . Mundo islámico: Alí murió traicionado por los suyos y asesinado. ;</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<td class="data">20544</td>
+<td class="data">Acontecimientos . Nacimientos . Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">6</th>
+<td class="data">20545</td>
+<td class="data">Acontecimientos . Un monje anónimo realiza la primera escalada al monte Fuji en Japón Nacimientos . Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
+<td class="data">20546</td>
+<td class="data">Acontecimientos . Sínodo de Whitby. Nacimientos . Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">8</th>
+<td class="data">20547</td>
+<td class="data">Acontecimientos . Nacimientos . Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<td class="data">20548</td>
+<td class="data">Este artículo trata sobre el año 666 d. C. Para otros usos del número 666, Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">10</th>
+<td class="data">20549</td>
+<td class="data">Acontecimientos . Nacimientos . Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<td class="data">20550</td>
+<td class="data">Acontecimientos . La península de Corea es unificada por vez primera en la historia por el r Nacimientos . Fallecimientos . 15 de septiembre: Constante II, emperador bizantino.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">12</th>
+<td class="data">20552</td>
+<td class="data">Acontecimientos . Nacimientos . Chilperico II, rey franco merovingio; Fallecimientos . Brahmagupta, matemático y astrónomo indio.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">13</th>
+<td class="data">20553</td>
+<td class="data">Acontecimientos . Nacimientos . Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">14</th>
+<td class="data">20554</td>
+<td class="data">Acontecimientos . 21 de septiembre - Wamba fue elegido rey de los visigodos en la localidad Adeodato II sucede a San Vitaliano como papa. Nacimientos . Fallecimientos . 27 de enero - Vitaliano, Papa. Recesvinto, rey visigodo.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">15</th>
+<td class="data">20555</td>
+<td class="data">Acontecimientos . Nacimientos . Fallecimientos . Clotario III, rey de Neustria y de Borgoña.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">16</th>
+<td class="data">20556</td>
+<td class="data">Acontecimientos . Nacimientos . Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">17</th>
+<td class="data">20557</td>
+<td class="data">Acontecimientos . Se lleva a cabo el IX Concilio de Toledo. Nacimientos . Fallecimientos . Childerico II, rey de Austrasia ;</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">18</th>
+<td class="data">20558</td>
+<td class="data">Acontecimientos . Dono sucede a Adeodato II como papa. Nacimientos . Fallecimientos . 17 de junio - Adeodato II, Papa.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">19</th>
+<td class="data">20559</td>
+<td class="data">Acontecimientos . Nacimientos . Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">20</th>
+<td class="data">20560</td>
+<td class="data">Acontecimientos. San Agatón sucede a Dono como papa. Nacimientos. ; Fallecimientos. 11 de abril: Dono, papa católico. Aisha: una de las esposas de Mahoma.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">21</th>
+<td class="data">20561</td>
+<td class="data">Acontecimientos . Nacimientos . Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">22</th>
+<td class="data">20562</td>
+<td class="data">Acontecimientos . Ervigio se convierte en rey visigodo de España tras deponer a Wamba. Se celebra el Constantinopla III o Trulano. Nacimientos . Fallecimientos . Hussein, nieto de Mahoma, mártir del Islam, chií.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">23</th>
+<td class="data">20563</td>
+<td class="data">Acontecimientos . 9 de enero - XII Concilio de Toledo. Los búlgaros establecen un reino propio al sur del Danubio. Nacimientos . Fallecimientos . 10 de enero - Agatón, Papa.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">24</th>
+<td class="data">20564</td>
+<td class="data">Acontecimientos . San León II sucede a San Agatón como papa. Nacimientos . Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">25</th>
+<td class="data">20565</td>
+<td class="data">Acontecimientos . 4 de noviembre - Se inicia el XIII Concilio de Toledo. Nacimientos . Fallecimientos . 3 de julio - León II (Papa);</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">26</th>
+<td class="data">20566</td>
+<td class="data">Acontecimientos . 14 de noviembre - Se inicia el XIV Concilio de Toledo. San Benedicto II sucede a San León II como papa. Nacimientos . Fallecimientos .</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">27</th>
+<td class="data">20567</td>
+<td class="data">Acontecimientos . Abd al-Malik se convierte en califa. Juan V sucede a San Benedicto II como papa. Nacimientos . Fallecimientos . 7 de mayo - Benedicto II, Papa.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">28</th>
+<td class="data">20568</td>
+<td class="data">Acontecimientos . Conón sucede a Juan V como papa. Nacimientos . 23 de agosto - Carlos Martel mayordomo de palacio del reino de Austrasia. Fallecimientos . 2 de agosto - Juan V, Papa.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">29</th>
+<td class="data">20569</td>
+<td class="data">Acontecimientos . Égica se convierte en rey visigodo. San Sergio I sucede a Conón como papa. Nacimientos . Fallecimientos . 21 de septiembre - Conón, Papa. 15 de noviembre - Ervigio, rey visigodo de España (680 - 687).</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">30</th>
+<td class="data">20570</td>
+<td class="data">Acontecimientos . 11 de mayo - Comienza el XV Concilio de Toledo. Nacimientos . Fallecimientos . Wamba, rey visigodo de España (672-680).</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+</div>
+</body>
+</html>
