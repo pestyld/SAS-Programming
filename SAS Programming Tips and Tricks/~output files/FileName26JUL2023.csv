@@ -1,0 +1,16 @@
+This report is the Make, Model, and MPG of Cars
+
+Report run on:26JUL2023
+
+"Make","Model","MPG_City","MPG_Highway"
+"Acura","MDX",17,23
+"Acura","RSX Type S 2dr",24,31
+"Acura","TSX 4dr",22,29
+"Acura","TL 4dr",20,28
+"Acura","3.5 RL 4dr",18,24
+"Acura","3.5 RL w/Navigation 4dr",18,24
+"Acura","NSX coupe 2dr manual S",17,24
+"Audi","A4 1.8T 4dr",22,31
+"Audi","A41.8T convertible 2dr",23,30
+"Audi","A4 3.0 4dr",20,28
+
