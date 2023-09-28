@@ -3,7 +3,6 @@
 *****************************************;
 
 
-
 **************************************;
 * 1. How to add an image to a title  *;
 **************************************;
@@ -18,11 +17,17 @@ ods pdf file="&outpath/PicturePDF.pdf";
 /*Use ^ as an escape to pull images*/
 ods escapechar="^";
 
-title "^S={preimage='&outpath/sasimage.png'}";
-title2 j=left "^S={preimage='&outpath/sasimage.png'}"; /*You can also add title options like left align*/
-proc print data=sashelp.class;
+ods listing gpath='s:/';
+ods graphics / imagename="test" imagefmt=png;
+/* title "^S={preimage='&outpath/sasimage.png'}"; */
+/* title2 j=left "^S={preimage='&outpath/sasimage.png'}"; /*You can also add title options like left align */
+ods text="^S={preimage='&outpath/sasimage.png'}";
+proc sgplot data=sashelp.cars;
+	vbar Type;
 run;
 title;
+
+ods graphics / reset;
 
 ods pdf close;
 
