@@ -1,5 +1,5 @@
 /****************************************************************/
-/* SESUG VISUALIZATION PROJECT */
+/* SESUG VISUALIZATION PROJECT 1                                */
 /****************************************************************/
 
 /**************/
@@ -23,7 +23,7 @@
 
 /* Raw data Excel file */
 options validvarname=v7;
-libname xl xlsx "&data/SESUG 2023_Visualization Contest_Charlotte Checkers.xlsx";
+libname xl xlsx "&data./SESUG 2023_Visualization Contest_Charlotte Checkers.xlsx";
 
 /* Final data output folder */
 libname out "&data/";
